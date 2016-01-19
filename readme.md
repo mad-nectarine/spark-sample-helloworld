@@ -3,7 +3,7 @@
 1. install jdk 1.8 and sbt
 2. execute sbt-assembly
     
-    *※ if you execute on windows, copy this folder to "c:\" before execute below.*
+    *※ if you execute on windows, use "win.compile.bat" in this folder or copy this folder to "c:\" before execute below.*
     ```console
     cd /to-this-folder
     sbt assembly
@@ -25,12 +25,12 @@
    
    ```console
    ${SPARK_HOME}/bin/spark-submit \
-   --master yarn \
+   --master yarn-client \
    --class mad_nectarine.spark.sample.helloworld.CountLinesIncludingWord \
    /opt/spark-sample-helloworld/spark-sample-helloworld-assembly-1.0.jar \
    "/tmp/sample-data.txt" "hoge"
    
    ...
-   There was 4 lines including 'hoge'.（/tmp/sample-data.txt）
+   There are 4 lines including 'hoge'.（/tmp/sample-data.txt）
    ...
    ```

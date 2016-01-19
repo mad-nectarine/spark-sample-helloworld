@@ -28,7 +28,7 @@ object CountLinesIncludingWord extends Logging {
         x.toLowerCase().contains(word) == true
       ).count()
 
-      println(s"There was ${count} lines including '${word}'.（${filePath}）")
+      println(s"There are ${count} lines including '${word}'.（${filePath}）")
 
     } finally{
       context.stop()
